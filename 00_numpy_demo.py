@@ -1,3 +1,5 @@
+import time
+
 from PIL import Image
 
 import numpy as np
@@ -46,3 +48,9 @@ np.power
 # same sum(), mean(), median(), var(), std()
 a9 = np.array([1, 2, 3, 4, 5, 6, 7])  # [::-1] is [7 6 5 4 3 2 1]
 img = Image.open('img/sleep cat.jpeg')
+# img.show()
+imgArr = np.array(img)
+imgShape = imgArr.shape
+img_r = imgArr[:, :, 0]  # rad only
+# Image.fromarray(img_r).show()
+# print(imgShape) = (431, 610, 3)
